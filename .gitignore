@@ -6,3 +6,4 @@ Homestead.json
 /public/files
 .env.testing
 .env.production
+.idea
