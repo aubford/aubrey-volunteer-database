@@ -7,3 +7,4 @@ Homestead.json
 .env.testing
 .env.production
 .idea
+.DS__Store
