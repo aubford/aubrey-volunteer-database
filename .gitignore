@@ -3,8 +3,8 @@
 Homestead.yaml
 Homestead.json
 .env
-/public/files
-.env.testing
 .env.production
+.env.heroku
+/public/files
 .idea
 .DS__Store
