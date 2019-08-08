@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
-
 /**
  * Laravel - A PHP Framework For Web Artisans
  *
@@ -53,20 +51,6 @@ $kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
 
 $response = $kernel->handle(
     $request = Illuminate\Http\Request::capture()
-);
-
-Request::setTrustedProxies(
-    // the IP address (or range) of your proxy
-    ['127.0.0.1', $request->server->get('REMOTE_ADDR')],
-
-    // trust *all* "X-Forwarded-*" headers
-    Request::HEADER_X_FORWARDED_ALL
-
-    // or, if your proxy instead uses the "Forwarded" header
-    // Request::HEADER_FORWARDED
-
-    // or, if you're using AWS ELB
-    // Request::HEADER_X_FORWARDED_AWS_ELB
 );
 
 $response->send();
