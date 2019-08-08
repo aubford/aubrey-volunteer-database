@@ -14,31 +14,31 @@ class EventServiceProvider extends ServiceProvider
      */
     protected $listen =
     [
-        'App\Events\UserRegistered' =>
-        [
-            'App\Listeners\SendUserWelcome',
-            'App\Listeners\SendAdminWelcome',
-        ],
-
-        'App\Events\FileUploaded' =>
-        [
-            'App\Listeners\SendAdminFileUploaded',
-        ],
-
-        'App\Events\FileChanged' =>
-        [
-            'App\Listeners\SendUserFileChanged',
-        ],
-
-        'App\Events\ForgotPassword' =>
-        [
-            'App\Listeners\SendUserMessage',
-        ],
-        'App\Events\SlotChanged' =>
-        [
-            'App\Listeners\SendAdminRemovedShift',
-            'App\Listeners\SendUserShiftConfirmation',
-        ],
+//        'App\Events\UserRegistered' =>
+//        [
+//            'App\Listeners\SendUserWelcome',
+//            'App\Listeners\SendAdminWelcome',
+//        ],
+//
+//        'App\Events\FileUploaded' =>
+//        [
+//            'App\Listeners\SendAdminFileUploaded',
+//        ],
+//
+//        'App\Events\FileChanged' =>
+//        [
+//            'App\Listeners\SendUserFileChanged',
+//        ],
+//
+//        'App\Events\ForgotPassword' =>
+//        [
+//            'App\Listeners\SendUserMessage',
+//        ],
+//        'App\Events\SlotChanged' =>
+//        [
+//            'App\Listeners\SendAdminRemovedShift',
+//            'App\Listeners\SendUserShiftConfirmation',
+//        ],
     ];
 
     /**

@@ -46,10 +46,10 @@ use App\Helpers;
             <div class="col-sm-10 value">{{ Helpers::displayName($user, 'Not Provided') }}</div>
         </div>
 
-        <div class="row">
-            <div class="col-sm-2 title">Camp</div>
-            <div class="col-sm-10 value">{{ $user->data->camp or 'Not Provided' }}</div>
-        </div>
+<!--        <div class="row">-->
+<!--            <div class="col-sm-2 title">Camp</div>-->
+<!--            <div class="col-sm-10 value">{{ $user->data->camp or 'Not Provided' }}</div>-->
+<!--        </div>-->
 
         <div class="row">
             <div class="col-sm-2 title">Phone</div>
@@ -66,20 +66,20 @@ use App\Helpers;
             <div class="col-sm-10 value">{{ $user->data->emergency_phone or 'Not Provided' }}</div>
         </div>
 
-        <div class="row">
-            <div class="col-sm-2 title">Birthday</div>
-            <div class="col-sm-10 value">{{ $user->data->birthday or 'Not Provided' }}</div>
-        </div>
+<!--        <div class="row">-->
+<!--            <div class="col-sm-2 title">Birthday</div>-->
+<!--            <div class="col-sm-10 value">{{ $user->data->birthday or 'Not Provided' }}</div>-->
+<!--        </div>-->
 
         <br>
         <a href="/profile/data/edit" class="btn btn-primary">Edit Additional Information</a>
     </div>
 
     <hr>
-    <p>
-        Are you are a certified EMT or have CPR training? You can upload documents to your profile for administrators to verify.
-        When approved, you will automatically be able to sign up for shifts that require training.
-    </p>
+<!--    <p>-->
+<!--        Are you are a certified EMT or have CPR training? You can upload documents to your profile for administrators to verify.-->
+<!--        When approved, you will automatically be able to sign up for shifts that require training.-->
+<!--    </p>-->
 
     @if($user->uploads->count())
         <h2>Uploaded Files</h2>

@@ -117,8 +117,7 @@ foreach($schedule->event->days() as $day)
                     'options' =>
                     [
                         '' => 'Select a duration',
-                        '03:00' => 'Regular Shift (3 hours)',
-                        '06:00' => 'Shift Lead (6 hours)',
+                        '04:00' => 'Regular Shift (4 hours)',
                         'custom' => 'Other'
                     ],
                     'value' => $schedule->duration

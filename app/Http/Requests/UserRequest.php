@@ -19,7 +19,7 @@ class UserRequest extends Request
     /**
      * Get the validation rules that apply to the request.
      * Dynamically apply rules based on what type of request is being made
-     * 
+     *
      * @return array
      */
     public function rules()
@@ -30,7 +30,7 @@ class UserRequest extends Request
                 $rules =
                 [
                     'name' => 'required|min:3|account',
-                    'password' => 'required|min:8|hashed',
+                    'password' => 'hashed',
                 ];
             break;
 
@@ -39,14 +39,14 @@ class UserRequest extends Request
                 [
                     'name' => 'required|min:3|unique:users',
                     'email' => 'required|email|unique:users',
-                    'password' => 'required|min:8|confirmed',
+                    'password' => 'confirmed',
                 ];
             break;
 
             case "forgot/{token}":
                 $rules =
                 [
-                    'password' => 'required|min:8|confirmed',
+                    'password' => 'confirmed',
                 ];
             break;
 

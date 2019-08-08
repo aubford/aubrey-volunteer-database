@@ -25,6 +25,7 @@ A volunteer database for events written using the Laravel 5.6 framework
 5. Run ```cp .env.example .env``` and configure ```DB_DATABASE```, ```DB_USERNAME```, and ```DB_PASSWORD```
     * _Note_: You must set this up ahead of time, an [easy guide for Ubuntu users is available](#mysql).
 6. Run ```php artisan migrate``` within the **laravel** folder
+7. Run ```php artisan serve``` to run in dev
 
 
 ## <a name="configuration"></a> Setup / Configuration
@@ -36,6 +37,7 @@ A volunteer database for events written using the Laravel 5.6 framework
 5. Optionally, you may configure your websocket server to use a specific hostname, however by default it will use the current domain of the site
 6. Run ```npm run build``` within the **laravel** folder.
 7. Run ```php artisan db:seed``` within the **laravel** folder to populate the database with user roles
+- rollback migrations/seeds and re-migrate/re-seed: ```php artisan migrate:refresh --seed```
 
 
 Alright! Now everything is compiled and the site is functional. You can register accounts, create events, and sign up for shifts.

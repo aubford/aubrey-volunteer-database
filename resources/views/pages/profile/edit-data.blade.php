@@ -33,15 +33,6 @@ use App\Helpers;
 
         @include('partials/form/text',
         [
-            'name' => 'camp',
-            'label' => 'Your Camp',
-            'placeholder' => 'Camp Creative Name',
-            'help' => "Enter your camp name if you have one, or 'open camping' if not",
-            'value' => (is_null($user->data)) ? '' : $user->data->camp
-        ])
-
-        @include('partials/form/text',
-        [
             'name' => 'phone',
             'label' => 'Phone Number',
             'value' => (is_null($user->data)) ? '' : $user->data->phone
@@ -59,15 +50,6 @@ use App\Helpers;
             'name' => 'emergency_phone',
             'label' => 'Emergency Phone Number',
             'value' => (is_null($user->data)) ? '' : $user->data->emergency_phone
-        ])
-
-        @include('partials/form/date',
-        [
-            'name' => 'birthday',
-            'label' => 'Birthday',
-            'placeholder' => 'YYYY-MM-DD',
-            'help' => 'This will only be used as a part of the event census',
-            'value' => (is_null($user->data)) ? '' : $user->data->birthday
         ])
 
         <button type="submit" class="btn btn-success">Save Changes</button>

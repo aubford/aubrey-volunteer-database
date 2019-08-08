@@ -14,13 +14,13 @@ class ProfileRequest extends Request
         [
             'name' => 'required|min:3|unique:users',
             'email' => 'required|email|unique:users',
-            'current_password' => 'required|min:8|hashed'
+            'current_password' => 'hashed'
         ],
 
         'password' =>
         [
-            'password' => 'required|min:8|hashed',
-            'new_password' => 'required|min:8|confirmed'
+            'password' => 'hashed',
+            'new_password' => 'confirmed'
         ],
 
         'data' =>
@@ -44,7 +44,7 @@ class ProfileRequest extends Request
         {
             return true;
         }
-        
+
         return false;
     }
 
@@ -65,7 +65,7 @@ class ProfileRequest extends Request
             $rules['name'] .= ',name,' . Auth::user()->id;
             $rules['email'] .= ',email,' . Auth::user()->id;
         }
-        
+
         return $rules;
     }
 }

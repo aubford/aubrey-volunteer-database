@@ -33,10 +33,10 @@ use App\Helpers;
             <div class="col-sm-10 value">{{ Helpers::displayName($user, 'Not Provided') }}</div>
         </div>
 
-        <div class="row">
-            <div class="col-sm-2 title">Camp</div>
-            <div class="col-sm-10 value">{{ $user->data->camp or 'Not Provided' }}</div>
-        </div>
+<!--        <div class="row">-->
+<!--            <div class="col-sm-2 title">Camp</div>-->
+<!--            <div class="col-sm-10 value">{{ $user->data->camp or 'Not Provided' }}</div>-->
+<!--        </div>-->
 
         <div class="row">
             <div class="col-sm-2 title">Phone</div>
@@ -53,10 +53,10 @@ use App\Helpers;
             <div class="col-sm-10 value">{{ $user->data->emergency_phone or 'Not Provided' }}</div>
         </div>
 
-        <div class="row">
-            <div class="col-sm-2 title">Birthday</div>
-            <div class="col-sm-10 value">{{ $user->data->birthday or 'Not Provided' }}</div>
-        </div>
+<!--        <div class="row">-->
+<!--            <div class="col-sm-2 title">Birthday</div>-->
+<!--            <div class="col-sm-10 value">{{ $user->data->birthday or 'Not Provided' }}</div>-->
+<!--        </div>-->
 
         <h3>User Roles</h3>
 
