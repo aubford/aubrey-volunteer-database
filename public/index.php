@@ -48,11 +48,16 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
 | and wonderful application we have prepared for them.
 |
 */
-$request = Request::createFromGlobals();
+
+$kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
+
+$response = $kernel->handle(
+    $request = Illuminate\Http\Request::capture()
+);
 
 Request::setTrustedProxies(
     // the IP address (or range) of your proxy
-    ['192.0.0.1', '10.0.0.0/8'],
+    ['127.0.0.1', $request->server->get('REMOTE_ADDR')],
 
     // trust *all* "X-Forwarded-*" headers
     Request::HEADER_X_FORWARDED_ALL
@@ -62,13 +67,6 @@ Request::setTrustedProxies(
 
     // or, if you're using AWS ELB
     // Request::HEADER_X_FORWARDED_AWS_ELB
-);
-
-
-$kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
-
-$response = $kernel->handle(
-    $request = Illuminate\Http\Request::capture()
 );
 
 $response->send();
