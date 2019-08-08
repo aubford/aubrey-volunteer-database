@@ -16,7 +16,7 @@ use App\Helpers;
         @include('partials/form/text',
         [
             'name' => 'full_name',
-            'label' => 'Full Name',
+            'label' => 'Full Name (Required)',
             'placeholder' => 'Your name in the Default World',
             'help' => "Required. Your full name is used for reporting and ticketing purposes",
             'value' => (is_null($user->data)) ? '' : $user->data->full_name
@@ -29,6 +29,14 @@ use App\Helpers;
             'placeholder' => 'Your name on the Playa',
             'help' => "This name will be shown to other users when you sign up for a shift",
             'value' => Helpers::displayName($user)
+        ])
+
+        @include('partials/form/text',
+        [
+            'name' => 'camp',
+            'label' => 'Facebook Name/Some Internet Contact Method (Please provide, this will help leadership not have to be middleman for shift swaps!)',
+            'placeholder' => 'Aubrey Car',
+            'value' => (is_null($user->data)) ? '' : $user->data->camp
         ])
 
         @include('partials/form/text',

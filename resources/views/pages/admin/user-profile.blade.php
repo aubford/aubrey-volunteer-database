@@ -33,10 +33,10 @@ use App\Helpers;
             <div class="col-sm-10 value">{{ Helpers::displayName($user, 'Not Provided') }}</div>
         </div>
 
-<!--        <div class="row">-->
-<!--            <div class="col-sm-2 title">Camp</div>-->
-<!--            <div class="col-sm-10 value">{{ $user->data->camp or 'Not Provided' }}</div>-->
-<!--        </div>-->
+        <div class="row">
+            <div class="col-sm-2 title">Facebook/Internet Contact Method</div>
+            <div class="col-sm-10 value">{{ $user->data->camp or 'Not Provided' }}</div>
+        </div>
 
         <div class="row">
             <div class="col-sm-2 title">Phone</div>

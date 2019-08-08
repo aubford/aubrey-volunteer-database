@@ -6,7 +6,7 @@
 
         <div class="navbar-header">
             <a class="pull-left" href="/"><img style="padding:5px" src="/img/apo-logo-particle.png"></a>
-            <a class="navbar-brand" href="/">VolunteerDB</a>
+            <a class="navbar-brand" href="/">VolunteerDB (Home)</a>
         </div>
 
         <div class="collapse navbar-collapse">

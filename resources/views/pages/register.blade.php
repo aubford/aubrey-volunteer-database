@@ -7,7 +7,7 @@
     {!! Form::open() !!}
         @include('partials/form/text', ['name' => 'name', 'label' => 'Username', 'placeholder' => 'Your login name'])
         @include('partials/form/text', ['name' => 'email', 'label' => 'Email address', 'placeholder' => 'Your email'])
-        @include('partials/form/password', ['name' => 'password', 'label' => 'Password', 'placeholder' => 'Password is optional!!'])
+        @include('partials/form/password', ['name' => 'password', 'label' => 'Password (optional)', 'placeholder' => 'Your Password'])
         @include('partials/form/password', ['name' => 'password_confirmation', 'label' => 'Confirm Password', 'placeholder' => 'Type your password again'])
 
         <button type="submit" class="btn btn-primary">Submit</button>

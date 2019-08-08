@@ -102,9 +102,11 @@ foreach($event->days() as $day)
                     [
                         '' => 'Select a time',
                         '0:00' => 'Midnight (beginning of day)',
-                        '6:00' => '6 AM',
-                        '9:00' => '9 AM',
+                        '8:00' => '8 AM',
+                        '10:00' => '10 AM',
                         '12:00' => 'Noon',
+                        '15:00' => '3 PM',
+                        '17:00' => '5 PM',
                         'custom' => 'Other'
                     ]
                 ])
