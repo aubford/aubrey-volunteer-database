@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\URL;
 use App\Models\User;
 
 class AppServiceProvider extends ServiceProvider
@@ -18,6 +19,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        if ($this->app->environment() == 'production') {
+            URL::forceScheme('https');
+        }
+
         Validator::extend('account', function($attribute, $value, $parameters)
         {
             $user = User::where('name', Input::get('name'))->orWhere('email', Input::get('name'))->first();
@@ -52,14 +57,14 @@ class AppServiceProvider extends ServiceProvider
             {
                 return true;
             }
-            
+
             return false;
         });
 
         Validator::extend('time', function($attribute, $value, $parameters)
         {
             $value = trim($value);
-            
+
             // Check against 12 hour time (with AM/PM) or 24 hour time
             $twelve = date_parse_from_format('h:i a', $value);
             $twentyfour = date_parse_from_format('H:i', $value);
