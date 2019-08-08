@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'default' => env('LOG_CHANNEL', 'errorLog'),
+    'default' => env('LOG_CHANNEL', 'stack'),
 
     /*
     |--------------------------------------------------------------------------
@@ -35,7 +35,7 @@ return [
 
     'channels' => [
         'stack' => [
-            'driver' => 'errorLog',
+            'driver' => 'stack',
             'channels' => ['single'],
             'ignore_exceptions' => false,
         ],
@@ -72,7 +72,7 @@ return [
         ],
 
         'stderr' => [
-            'driver' => 'errorLog',
+            'driver' => 'errorlog',
             'handler' => StreamHandler::class,
             'formatter' => env('LOG_STDERR_FORMATTER'),
             'with' => [
