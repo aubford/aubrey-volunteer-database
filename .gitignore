@@ -4,6 +4,7 @@ Homestead.yaml
 Homestead.json
 .env
 /public/files
+/public/js/bundle.js
 .env.testing
 .env.production
 .idea

@@ -37,7 +37,8 @@ A volunteer database for events written using the Laravel 5.6 framework
 5. Optionally, you may configure your websocket server to use a specific hostname, however by default it will use the current domain of the site
 6. Run ```npm run build``` within the **laravel** folder.
 7. Run ```php artisan db:seed``` within the **laravel** folder to populate the database with user roles
-- rollback migrations/seeds and re-migrate/re-seed: ```php artisan migrate:refresh --seed```
+
+- NOTE: You can rollback migrations/seeds and re-migrate/re-seed with: ```php artisan migrate:refresh --seed```
 
 
 Alright! Now everything is compiled and the site is functional. You can register accounts, create events, and sign up for shifts.
